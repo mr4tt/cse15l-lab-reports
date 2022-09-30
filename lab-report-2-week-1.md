@@ -5,7 +5,7 @@
 - Follow the directions on the installer
 - I did not install it fresh because I already have it 
 - Once you have it installed, it should look like this:
-- ![Image](/images/report_2_vscode.png
+- ![Image](/images/report_2_vscode.png)
   
 ## Remotely Connecting
 - To remotely connect to a server, use the `ssh` command 
