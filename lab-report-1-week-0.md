@@ -1,2 +1,2 @@
 Screenshot:
-![Image](/cse15L.png)
+![Image](/images/cse15L.png)
