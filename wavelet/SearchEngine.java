@@ -33,7 +33,7 @@ class Handler implements URLHandler
                 { 
                     if (searchParameters.length < 2)
                     {
-                        return String.format("Search Complete! \n%s", queries);
+                        return String.format("<b>Search Complete</b>! \n%s", queries);
                     }
 
                     String searchQueries = "";
@@ -44,9 +44,10 @@ class Handler implements URLHandler
                             searchQueries += i + "\n";
                         }
                     }
-                    return String.format("Search Complete! \n%s", searchQueries);
+                    return String.format("<b>Search Complete</b>! \n%s", searchQueries);
                 }
             }
+
         return "404 Not Found!";
         }
     }

@@ -39,6 +39,8 @@
   - This copies the WhereAmI.java file from your computer into the server's home directory (denoted by ~)
   - If you ssh into your server, you'll see the file there (run ls in your home directory to check)
 - ![Image](images/report_2_scp.png)
+- You can also scp to your own computer from the remote server 
+- ![Image](images/report_2_scp_self.png)
 ## Setting an SSH Key
 - When using ssh, you have to type your password in every time
 - Using an SSH lets the server recognize your computer as safe to log in with, meaning you don't need to log in with a password
