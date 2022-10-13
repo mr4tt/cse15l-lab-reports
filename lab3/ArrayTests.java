@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import org.junit.*;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class ArrayTests {
@@ -32,4 +33,23 @@ public class ArrayTests {
       int[] one = {3};
       assertArrayEquals(new int[]{3}, ArrayExamples.reversed(one));
   }
+
+    @Test
+    public void testAverageWithoutLowest()
+    {
+        double[] empty = { };
+        assertEquals(0.0, ArrayExamples.averageWithoutLowest(empty), 0.001);
+
+        double[] one = {3};
+        assertEquals(0.0, ArrayExamples.averageWithoutLowest(one),0.001);
+
+        double[] input = {0, 1, 2, 3, 4};
+        assertEquals(2.5, ArrayExamples.averageWithoutLowest(input),0.001);
+
+        double[] input2 = {0, 0, 1, 2, 3, 4};
+        assertEquals(2, ArrayExamples.averageWithoutLowest(input2),0.001);
+
+        double[] input3 = {1, 1, 2, 2, 3};
+        assertEquals(2, ArrayExamples.averageWithoutLowest(input3),0.001);
+    }
 }
