@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 class StringChecker {
-    boolean checkString(String s)
+    static boolean checkString(String s)
     {
       return (s.contains("a"));
     }

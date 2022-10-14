@@ -15,7 +15,10 @@ public class ListTests {
         List<String> correct = Arrays.asList("soup", "shrimp");
         //ArrayGL<String> agl = new ArrayGL<String>(stringContent);
 
-        StringChecker.StringChecker()
+        for(String i : result)
+        {
+            StringChecker.checkString(i);
+        }
         assertEquals(correct, ListExamples.filter());
     }
 
