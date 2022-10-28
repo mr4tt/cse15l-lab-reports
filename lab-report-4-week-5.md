@@ -166,7 +166,45 @@ $ grep -A2 -B2 sphygmomanometer  pmed.0020162.txt
           nearest 0.5 cm, and the averages of two measures (different by no more than 1 cm) were used to calculate the waist-to-hip ratio (WHR). After participants rested for 5 min, a mercury sphygmomanometer was used to take two measures each of systolic and diastolic blood pressure (seated, right arm); averages of these two measures were used for data analysis. High blood pressure was defined as systolic blood pressure 140 mm Hg or higher,
 ```
 
+Let's try combining the -n flag to see if those line numbers also appear. 
 
+They do! Interestingly, only the line with sphygmomanometer has the line number and a colon after it. The other line numbers are affixed with a dash. 
 
+```
+$ grep -n -A2 -B2 sphygmomanometer pmed.0020162.txt
+154- nearest 0.5 cm, and the averages of two measures (different by no more than 1 cm) were
+
+155- used to calculate the waist-to-hip ratio (WHR). After participants rested for 5 min, a
+
+156: mercury sphygmomanometer was used to take two measures each of systolic and diastolic
+
+157- blood pressure (seated, right arm); averages of these two measures were used for data
+
+158- analysis. High blood pressure was defined as systolic blood pressure 140 mm Hg or higher,
+```
+
+What about looking through multiple folders? 
+Another interesting behavior is that it will append a separator between each file. Between the information in biomed/1471-2407-2-19.txt and biomed/1472-6785-2-7.txt, there is a -- so you can read each file easier. If you want to disable the separators, you can append the --no-group-separator flag. Or, if you want a unique separator, you can append the --group-separator=SEP flag, where SEP is whatever separator you want (instead of the default of --). 
+
+```
+$ grep -n -A2 -B2 -r scissors
+biomed/1471-2407-2-19.txt-222-          microcentrifuge tubes containing 1 mL of sodium phosphate
+biomed/1471-2407-2-19.txt-223-          buffer (10 mmol/L, pH 7.4) and finely minced with
+biomed/1471-2407-2-19.txt:224:          scissors for 15 seconds. Samples were then incubated for
+biomed/1471-2407-2-19.txt-225-          20 minutes at 37°C in a shaking water bath. Following the
+biomed/1471-2407-2-19.txt-226-          incubation period, samples were centrifuged at 9 000 ×
+--
+biomed/1472-6785-2-7.txt-507-          from leaf surfaces of the species that were not aromatic
+biomed/1472-6785-2-7.txt-508-          when their leaf surfaces were rubbed. Using sterilized
+biomed/1472-6785-2-7.txt:509:          scissors, we collected one cm 2of leaf material from each
+biomed/1472-6785-2-7.txt-510-          of seven haphazardly chosen plants (from three to five
+biomed/1472-6785-2-7.txt-511-          species) and combined all seven in a single sterile vial.
+--
+biomed/1476-511X-1-2.txt-1150-          carefully dissecting out the liver, rinsing with 70% EtOH
+biomed/1476-511X-1-2.txt-1151-          to remove adhering blood, trimming of adhering connective
+biomed/1476-511X-1-2.txt:1152:          tissue with scissors, cutting into 100-150 mg
+biomed/1476-511X-1-2.txt-1153-          subsections, freezing in liquid N
+biomed/1476-511X-1-2.txt-1154-          2 , and storing at -80°C until gene
+```
 
 
