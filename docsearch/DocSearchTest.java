@@ -12,5 +12,5 @@ public class DocSearchTest {
         Handler h = new Handler("technical/biomed/");
         URI rootPath = new URI("http://localhost/");
         assertEquals(h.handleRequest(rootPath), "There are 837 files to search");
-    }
+     }
 }
