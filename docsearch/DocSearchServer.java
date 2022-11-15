@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 class FileHelpers {
-    static List<File> getFiles(Path start) throws IOException {
-        File f = start.toFile();
+    static List<File> getFiles(Path base) throws IOException {
+        File f = base.toFile();
         List<File> result = new ArrayList<>();
         if(f.isDirectory()) {
             System.out.println("It's a folder");
@@ -20,7 +20,7 @@ class FileHelpers {
             }
         }
         else {
-            result.add(start.toFile());
+            result.add(base.toFile());
         }
         return result;
     }
@@ -55,7 +55,7 @@ class DocSearchServer {
 
         int port = Integer.parseInt(args[0]);
 
-        Server.start(port, new Handler("./technical/"));
+        Server.base(port, new Handler("./technical/"));
     }
 }
 
