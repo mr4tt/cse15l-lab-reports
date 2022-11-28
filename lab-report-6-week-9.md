@@ -62,14 +62,13 @@ if [ -n "$mergeResult" ]
 then
     echo "Merge method does not work"
     echo $mergeResult
-    echo -e "\n"
-    echo "Score: $score / $total"
 else   
     echo "Merge method works"
     ((score=$score+1))
-    echo -e "\n"
-    echo "Score: $score / $total"
 fi
+
+echo -e "\n"
+echo "Score: $score / $total"
 ```
 
 ## Some Examples of Usage
