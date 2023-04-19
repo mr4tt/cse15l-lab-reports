@@ -8,19 +8,13 @@ import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class ListTests {
-    // @Test
-    // public void testFilter()
-    // {
-    //     List<String> result = Arrays.asList("soup", "turtle", "shrimp");
-    //     List<String> correct = Arrays.asList("soup", "shrimp");
-    //     //ArrayGL<String> agl = new ArrayGL<String>(stringContent);
+    @Test
+    public void testFilter()
+    {
+        assertEquals(List.of("string"), ListExamples.filter(List.of("string", "cool"), new IfFourDie()));
+    }
 
-    //     for(String i : result)
-    //     {
-    //         StringChecker.checkString(i);
-    //     }
-    //     assertEquals(correct, ListExamples.filter());
-    // }
+    
 
     @Test
     public void testMerge()

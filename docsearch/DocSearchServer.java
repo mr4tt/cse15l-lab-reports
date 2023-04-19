@@ -41,7 +41,9 @@ class Handler implements URLHandler {
             System.out.println(this.files);
             return "There are " + this.files.size() + " files to search";
         }
-        else if(url.getPath().equals(""))
+        else if(url.getPath().equals("")){
+            // oops i never finished i guess 
+        }
         return "Don't know how to handle that path!";
     }
 }
@@ -55,7 +57,7 @@ class DocSearchServer {
 
         int port = Integer.parseInt(args[0]);
 
-        Server.base(port, new Handler("./technical/"));
+        Server.start(port, new Handler("./technical/"));
     }
 }
 

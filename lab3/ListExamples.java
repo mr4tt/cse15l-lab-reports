@@ -1,12 +1,20 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class StringChecker {
-    static boolean checkString(String s)
+class IfFourDie implements StringChecker
+{
+    @Override
+    public boolean checkString(String s) 
     {
-      return (s.contains("a"));
+        if (s.length() == 4)
+        {
+            return false;
+        }
+
+        return true;
     }
 }
+interface StringChecker { boolean checkString(String s); }
 
 class ListExamples {
 
